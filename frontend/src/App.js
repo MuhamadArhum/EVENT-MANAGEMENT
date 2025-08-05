@@ -10,6 +10,7 @@ import BookingForm from './components/BookingForm';
 import BookingList from './components/BookingList';
 import BookingDetails from './components/BookingDetails';
 import BookingCalendar from './components/Calendar';
+import ReportsPage from './pages/ReportsPage'; // Import the ReportsPage component
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
         <Route path="/bookings" element={<BookingList />} />
         <Route path="/booking/:id" element={<BookingDetails />} />
         <Route path="/calendar" element={<BookingCalendar />} />
+        
+        {/* Add Route for Reports Page */}
+        <Route path="/reports" element={<ReportsPage />} />
         
       </Routes>
     </Router>
