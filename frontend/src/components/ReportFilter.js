@@ -28,7 +28,7 @@ const ReportFilter = ({ filters, onChange, onGenerate }) => {
         </div>
       )}
 
-      <button onClick={onGenerate}>Generate Report</button>
+      <button className='btn btn-primary' onClick={onGenerate}>Generate Report</button>
     </div>
   );
 };

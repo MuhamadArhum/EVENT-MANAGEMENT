@@ -31,14 +31,14 @@ const ReportsPage = () => {
   };
 
   return (
-    <div>
-      <h1>Reports</h1>
+    <div className='container mt-5'>
+      <h2>Reports</h2>
       <ReportFilter filters={filters} onChange={handleFilterChange} onGenerate={handleGenerateReport} />
       
-      {loading && <p>Loading reports...</p>}
-      {error && <p>{error}</p>}
-      
-      <div>
+      {loading && <p className='loading-text'>Loading reports...</p>}
+      {error && <p className='error-text'>{error}</p>}
+
+      <div className='reports-list'>
         {reports && reports.map(report => (
           <ReportCard key={report._id} report={report} />
         ))}

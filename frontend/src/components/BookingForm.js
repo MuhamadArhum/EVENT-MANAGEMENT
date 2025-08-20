@@ -43,47 +43,47 @@ function BookingForm() {
 
   return (
     <div className="container mt-5">
-      <h2>Create Booking</h2>
+      <h1>Create Booking</h1>
       {message && <p>{message}</p>}
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
-          <label>Customer Name</label>
-          <input type="text" className="form-control"
+          <label for='customer-name'>Customer Name</label>
+          <input id='customer-name' name='customerName' type="text" className="form-control" placeholder='Enter Customer Name'
             value={customerName} onChange={(e) => setCustomerName(e.target.value)} required />
         </div>
         <div className="mb-3">
-          <label>Email</label>
-          <input type="email" className="form-control"
+          <label for='customer-email'>Email</label>
+          <input id='customer-email' name='customerEmail' type="email" className="form-control" placeholder='Enter Customer Email'
             value={customerEmail} onChange={(e) => setCustomerEmail(e.target.value)} required />
         </div>
         <div className="mb-3">
-          <label>Phone</label>
-          <input type="text" className="form-control"
+          <label for='customer-phone'>Phone</label>
+          <input id='customer-phone' name='customerPhone' type="text" className="form-control" placeholder='Enter Customer Phone'
             value={customerPhone} onChange={(e) => setCustomerPhone(e.target.value)} required />
         </div>
         <div className="mb-3">
-          <label>Service</label>
-          <input type="text" className="form-control"
+          <label for='service'>Service</label>
+          <input id='service' name='service' type="text" className="form-control" placeholder='Enter Service'
             value={service} onChange={(e) => setService(e.target.value)} required />
         </div>
         <div className="mb-3">
-          <label>Booking Date</label>
-          <input type="date" className="form-control"
+          <label for='booking-date'>Booking Date</label>
+          <input id='booking-date' name='bookingDate' type='date' className="form-control" placeholder='Select Booking Date'
             value={bookingDate} onChange={(e) => setBookingDate(e.target.value)} required />
         </div>
         <div className="mb-3">
-          <label>Notes</label>
-          <textarea className="form-control"
+          <label for='notes'>Notes</label>
+          <textarea id='notes' name='notes' className="form-control" placeholder='Enter Notes'
             value={notes} onChange={(e) => setNotes(e.target.value)} />
         </div>
         <div className="mb-3">
-          <label>Total Price</label>
-          <input type="number" className="form-control"
+          <label for='total-price'>Total Price</label>
+          <input id='total-price' name='totalPrice' type="number" className="form-control" placeholder='Enter Total Price'
             value={totalPrice} onChange={(e) => setTotalPrice(e.target.value)} required />
         </div>
         <div className="mb-3">
-          <label>Advance Amount</label>
-          <input type="number" className="form-control"
+          <label for='advance-amount'>Advance Amount</label>
+          <input id='advance-amount' name='advanceAmount' type="number" className="form-control" placeholder='Enter Advance Amount'
             value={advanceAmount} onChange={(e) => setAdvanceAmount(e.target.value)} />
         </div>
         <button type="submit" className="btn btn-primary">Create Booking</button>
